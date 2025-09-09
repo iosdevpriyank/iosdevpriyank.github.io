@@ -1,0 +1,880 @@
+:root {
+    /* Light Mode Colors - Enhanced Palette */
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-quaternary: #e2e8f0;
+    --surface: #ffffff;
+    --surface-elevated: #f8fafc;
+    --surface-glass: rgba(255, 255, 255, 0.8);
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-tertiary: #718096;
+    --text-quaternary: #a0aec0;
+    
+    /* Brand Colors - iOS Style */
+    --accent-primary: #007aff;
+    --accent-secondary: #5856d6;
+    --accent-tertiary: #af52de;
+    --accent-success: #34c759;
+    --accent-warning: #ff9500;
+    --accent-error: #ff3b30;
+    --accent-info: #5ac8fa;
+    --accent-tint: #00c7be;
+    
+    /* iOS 16 Glass Effect Variables - Light Mode (Content Visible) */
+    --glass-bg-primary: rgba(255, 255, 255, 0.15);
+    --glass-bg-secondary: rgba(248, 250, 252, 0.12);
+    --glass-bg-tertiary: rgba(241, 245, 249, 0.10);
+    --glass-border-primary: rgba(255, 255, 255, 0.2);
+    --glass-border-secondary: rgba(0, 0, 0, 0.05);
+    --glass-border-highlight: rgba(255, 255, 255, 0.3);
+    --glass-shadow-light: 0 4px 30px rgba(0, 0, 0, 0.1);
+    --glass-shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.15);
+    --glass-shadow-heavy: 0 12px 50px rgba(0, 0, 0, 0.2);
+    --glass-blur: blur(10px);
+    --glass-saturation: saturate(120%);
+    
+    /* Enhanced Border Colors */
+    --border-light: rgba(0, 0, 0, 0.08);
+    --border-medium: rgba(0, 0, 0, 0.12);
+    --border-heavy: rgba(0, 0, 0, 0.18);
+    
+    /* Color Variants for Different States */
+    --accent-primary-soft: rgba(0, 122, 255, 0.1);
+    --accent-primary-medium: rgba(0, 122, 255, 0.2);
+    --accent-secondary-soft: rgba(88, 86, 214, 0.1);
+    --accent-success-soft: rgba(52, 199, 89, 0.1);
+    --accent-warning-soft: rgba(255, 149, 0, 0.1);
+    --accent-error-soft: rgba(255, 59, 48, 0.1);
+    
+    /* Dynamic Gradients */
+    --gradient-primary: linear-gradient(135deg, #007aff 0%, #5856d6 50%, #af52de 100%);
+    --gradient-secondary: linear-gradient(135deg, #ff9500 0%, #ff3b30 100%);
+    --gradient-success: linear-gradient(135deg, #34c759 0%, #5ac8fa 100%);
+    --gradient-glass-light: linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%);
+    --gradient-glass-border: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.1) 100%);
+}
+
+[data-theme="dark"] {
+    /* Dark Mode Colors - Enhanced Palette */
+    --bg-primary: #000000;
+    --bg-secondary: #1c1c1e;
+    --bg-tertiary: #2c2c2e;
+    --bg-quaternary: #3a3a3c;
+    --surface: #1c1c1e;
+    --surface-elevated: #2c2c2e;
+    --surface-glass: rgba(28, 28, 30, 0.8);
+    --text-primary: #ffffff;
+    --text-secondary: #ebebf5;
+    --text-tertiary: #ebebf5;
+    --text-quaternary: #8e8e93;
+    
+    /* Brand Colors - iOS Dark Mode */
+    --accent-primary: #0a84ff;
+    --accent-secondary: #5e5ce6;
+    --accent-tertiary: #bf5af2;
+    --accent-success: #30d158;
+    --accent-warning: #ff9f0a;
+    --accent-error: #ff453a;
+    --accent-info: #64d2ff;
+    --accent-tint: #5ac8fa;
+    
+    /* iOS 16 Glass Effect Variables - Dark Mode (Content Visible) */
+    --glass-bg-primary: rgba(0, 0, 0, 0.2);
+    --glass-bg-secondary: rgba(28, 28, 30, 0.15);
+    --glass-bg-tertiary: rgba(44, 44, 46, 0.12);
+    --glass-border-primary: rgba(255, 255, 255, 0.1);
+    --glass-border-secondary: rgba(255, 255, 255, 0.08);
+    --glass-border-highlight: rgba(255, 255, 255, 0.15);
+    --glass-shadow-light: 0 4px 30px rgba(0, 0, 0, 0.4);
+    --glass-shadow-medium: 0 8px 40px rgba(0, 0, 0, 0.5);
+    --glass-shadow-heavy: 0 12px 50px rgba(0, 0, 0, 0.6);
+    --glass-blur: blur(10px);
+    --glass-saturation: saturate(120%);
+    
+    /* Enhanced Border Colors */
+    --border-light: rgba(255, 255, 255, 0.12);
+    --border-medium: rgba(255, 255, 255, 0.16);
+    --border-heavy: rgba(255, 255, 255, 0.24);
+    
+    /* Color Variants for Different States */
+    --accent-primary-soft: rgba(10, 132, 255, 0.15);
+    --accent-primary-medium: rgba(10, 132, 255, 0.25);
+    --accent-secondary-soft: rgba(94, 92, 230, 0.15);
+    --accent-success-soft: rgba(48, 209, 88, 0.15);
+    --accent-warning-soft: rgba(255, 159, 10, 0.15);
+    --accent-error-soft: rgba(255, 69, 58, 0.15);
+    
+    /* Dynamic Gradients */
+    --gradient-glass-light: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.02) 100%);
+    --gradient-glass-border: linear-gradient(135deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.05) 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Segoe UI', Roboto, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    overflow-x: hidden;
+}
+
+/* Theme Toggle Button - Subtle Frosted Glass */
+.theme-toggle {
+    position: fixed;
+    top: 50%;
+    right: 2rem;
+    transform: translateY(-50%);
+    z-index: 1001;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--glass-bg-primary);
+    border: 1px solid var(--glass-border-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--glass-shadow-light);
+    backdrop-filter: var(--glass-blur);
+}
+
+.theme-toggle:hover {
+    transform: translateY(-50%) scale(1.1);
+    box-shadow: var(--glass-shadow-medium);
+    background: var(--glass-bg-secondary);
+}
+
+/* Fixed Navigation - Subtle Glass */
+.main-nav {
+    position: relative;
+    top: auto;
+    left: auto;
+    width: 100%;
+    background: var(--glass-bg-primary);
+    backdrop-filter: var(--glass-blur);
+    border-bottom: 1px solid var(--glass-border-primary);
+    box-shadow: var(--glass-shadow-light);
+    transition: all 0.3s ease;
+}
+
+.main-nav.scrolled {
+    background: var(--glass-bg-secondary);
+    backdrop-filter: blur(15px);
+    box-shadow: var(--glass-shadow-medium);
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 1rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.main-nav .navbar-brand {
+    font-size: 1.75rem;
+    font-weight: 800;
+    background: linear-gradient(90deg, #ff7a18, #af002d, #319197);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.main-nav .navbar-brand:hover {
+    opacity: 0.85;
+}
+
+.main-nav .navbar-nav {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav .nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    position: relative;
+    padding: 0.5rem 0.75rem;
+    transition: color 0.3s ease;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.main-nav .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ff7a18, #af002d, #319197);
+    transition: width 0.3s ease;
+}
+
+.main-nav .nav-link:hover::after,
+.main-nav .nav-link:focus::after {
+    width: 100%;
+}
+
+.main-nav .nav-link:hover {
+    color: var(--text-primary);
+}
+
+.main-nav .nav-link.active {
+    color: var(--accent-primary);
+}
+
+/* Hero Section - Fixed padding to account for navigation */
+.hero-section {
+    min-height: 100vh;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    animation: float 20s ease-in-out infinite;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 900px;
+    padding: 2rem;
+    color: white;
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 900;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    animation: slideInUp 1s ease-out;
+    color: white;
+    text-align: center;
+}
+
+.hero-subtitle {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    margin-bottom: 3rem;
+    font-weight: 300;
+    animation: slideInUp 1s ease-out 0.3s both;
+    color: rgba(255, 255, 255, 0.95); /* Fixed color for hero subtitle */
+    text-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    animation: slideInUp 1s ease-out 0.6s both;
+}
+
+.about-title-text {
+    text-align: center;
+    margin-top: 8rem;
+    margin-bottom: 4rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 2rem;
+    border: 4px
+    solid var(--accent-primary);
+}
+
+/* iOS 16 Glass Effect for Stat Cards - Subtle Frosted Effect */
+.stat-card {
+    background: var(--glass-bg-primary);
+    backdrop-filter: var(--glass-blur);
+    border: 1px solid var(--glass-border-primary);
+    border-radius: 16px;
+    padding: 2rem 1rem;
+    transition: all 0.3s ease;
+    box-shadow: var(--glass-shadow-light);
+    position: relative;
+    text-align: center;
+}
+
+.stat-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--glass-shadow-medium);
+    background: var(--glass-bg-secondary);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.stat-number {
+    font-size: 2.5rem;
+    font-weight: 800;
+    display: block;
+    margin-bottom: 0.5rem;
+    color: white;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    animation: slideInUp 1s ease-out 0.9s both;
+}
+
+/* iOS 16 Glass Button Styles - Subtle Frosted Effect */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    backdrop-filter: var(--glass-blur);
+}
+
+.btn-primary {
+    background: var(--glass-bg-primary);
+    color: var(--accent-primary);
+    box-shadow: var(--glass-shadow-light);
+    border: 1px solid var(--glass-border-primary);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--glass-shadow-medium);
+    background: var(--glass-bg-secondary);
+}
+
+.btn-outline {
+    background: var(--glass-bg-tertiary);
+    color: white;
+    border: 1px solid var(--glass-border-primary);
+    backdrop-filter: var(--glass-blur);
+}
+
+.btn-outline:hover {
+    background: var(--glass-bg-secondary);
+    transform: translateY(-3px);
+    box-shadow: var(--glass-shadow-medium);
+}
+
+/* Sections */
+.section {
+    padding: 8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    scroll-margin-top: 100px; /* Account for fixed navigation */
+}
+
+.section-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin-bottom: 4rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Skills Grid with Subtle Frosted Glass Effect */
+.skill-card {
+    background: var(--glass-bg-primary);
+    border: 1px solid var(--glass-border-primary);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow-light);
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--glass-shadow-medium);
+    background: var(--glass-bg-secondary);
+}
+
+.skill-tag {
+    background: var(--glass-bg-secondary);
+    color: var(--text-primary);
+    padding: 0.6rem 1.2rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    border: 1px solid var(--glass-border-secondary);
+    transition: all 0.3s ease;
+    backdrop-filter: var(--glass-blur);
+}
+
+.skill-tag:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px var(--accent-primary-soft);
+}
+
+.project-card {
+    background: var(--glass-bg-primary);
+    border: 1px solid var(--glass-border-primary);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    position: relative;
+    height: fit-content;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow-light);
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--glass-shadow-medium);
+    background: var(--glass-bg-secondary);
+}
+
+.project-content {
+    padding: 2rem;
+    background: var(--surface); /* Solid background for content readability */
+}
+
+.project-link {
+    padding: 0.8rem 1.6rem;
+    background: var(--glass-bg-secondary);
+    color: var(--accent-primary);
+    text-decoration: none;
+    border-radius: 12px;
+    border: 1px solid var(--glass-border-secondary);
+    transition: all 0.3s ease;
+    font-weight: 500;
+    font-size: 0.9rem;
+    backdrop-filter: var(--glass-blur);
+}
+
+.project-link:hover {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--glass-shadow-light);
+}
+
+/* Blog Cards - Subtle Glass with Content Visibility */
+.blog-card {
+    background: var(--glass-bg-primary);
+    border: 1px solid var(--glass-border-primary);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    height: fit-content;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow-light);
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--glass-shadow-medium);
+    background: var(--glass-bg-secondary);
+}
+
+.blog-content {
+    padding: 2rem;
+    background: var(--surface); /* Solid background for content readability */
+}
+
+.blog-link {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    background: var(--accent-secondary-soft);
+    border: 1px solid transparent;
+}
+
+.blog-link:hover {
+    color: white;
+    background: var(--accent-secondary);
+    transform: translateY(-1px);
+}
+
+/* Filter Buttons - Frosted Glass */
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    background: var(--glass-bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border-primary);
+    border-radius: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow-light);
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--accent-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--glass-shadow-medium);
+}
+
+/* Blog Grid with Enhanced Glass Effect */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+.blog-card {
+    background: var(--glass-bg-primary);
+    border: 1px solid var(--glass-border-primary);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    height: fit-content;
+    backdrop-filter: var(--glass-blur) var(--glass-saturation);
+    box-shadow: var(--glass-shadow-medium);
+    position: relative;
+}
+
+.blog-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradient-glass-border);
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: var(--glass-shadow-heavy);
+    border-color: var(--glass-border-highlight);
+    background: var(--glass-bg-secondary);
+}
+
+.blog-image {
+    width: 100%;
+    height: 220px;
+    background: var(--gradient-secondary);
+    object-fit: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.blog-content {
+    padding: 2rem;
+    background: var(--glass-bg-tertiary);
+    backdrop-filter: var(--glass-blur);
+}
+
+.blog-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+    line-height: 1.4;
+}
+
+.blog-excerpt {
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.9rem;
+    color: var(--text-tertiary);
+}
+
+.blog-link {
+    color: var(--accent-secondary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    border-radius: 12px;
+    background: var(--accent-secondary-soft);
+}
+
+.blog-link:hover {
+    color: white;
+    background: var(--accent-secondary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px var(--accent-secondary-soft);
+}
+
+/* Filter Buttons with Enhanced Glass Effect */
+.filter-buttons {
+    margin-bottom: 3rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 1.8rem;
+    background: var(--glass-bg-primary);
+    color: var(--text-secondary);
+    border: 1px solid var(--glass-border-primary);
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    font-weight: 500;
+    backdrop-filter: var(--glass-blur) var(--glass-saturation);
+    box-shadow: var(--glass-shadow-light);
+    position: relative;
+    overflow: hidden;
+}
+
+.filter-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--accent-primary-soft);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.filter-btn:hover, .filter-btn.active {
+    background: var(--accent-primary);
+    color: white;
+    border-color: var(--accent-primary);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 25px var(--accent-primary-medium);
+}
+
+.filter-btn:hover::before, .filter-btn.active::before {
+    opacity: 1;
+}
+
+/* Focus states for accessibility */
+.btn:focus, .nav-link:focus, .theme-toggle:focus {
+    outline: 2px solid var(--accent-primary);
+    outline-offset: 2px;
+}
+
+/* Smooth transitions for theme switching */
+*, *::before, *::after {
+    transition-property: background-color, border-color, color, box-shadow, backdrop-filter;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+/* Enhanced scrolling animations */
+.main-nav.scrolled {
+    background: var(--glass-bg);
+    backdrop-filter: blur(30px);
+    box-shadow: 0 4px 30px var(--shadow-light);
+}
+
+.blogs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.blog-card {
+    background: var(--glass-bg-primary);
+    border: 1px solid var(--glass-border-primary);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-8px);
+}
+
+.blog-image {
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.blog-overlay {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(0,0,0,0.7);
+    padding: 0.5rem;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.blog-content {
+    padding: 1.5rem;
+}
+
+.blog-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+.blog-title {
+    margin-bottom: 1rem;
+    color: var(--text-primary);
+}
+
+.blog-description {
+    margin-bottom: 1.5rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.blog-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.blog-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.blog-tag {
+    background: var(--glass-bg-secondary);
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+}
+
+/* Print styles */
+@media print {
+    .main-nav, .theme-toggle, .hero-buttons, .filter-buttons {
+        display: none !important;
+    }
+    
+    .section {
+        padding: 2rem 0 !important;
+    }
+    
+    .hero-section {
+        padding-top: 2rem !important;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .hero-section::before {
+        animation: none;
+    }
+}
+
+.footer {
+    background: var(--glass-bg-primary);
+    backdrop-filter: var(--glass-blur);
+    border-top: 1px solid var(--glass-border-primary);
+    box-shadow: var(--glass-shadow-light);
+}
