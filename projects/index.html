@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Selected iOS applications and projects" />
+    <meta name="author" content="Priyank Gandhi" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>Projects</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://iosdevpriyank.github.io/projects" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Senior iOS Developer Portfolio" />
+    <meta property="og:title" content="Projects" />
+    <meta name="twitter:title" content="Projects" />
+    <meta property="og:description" content="Selected iOS applications and projects" />
+    <meta name="twitter:description" content="Selected iOS applications and projects" />
+    <meta property="og:url" content="https://iosdevpriyank.github.io/projects" />
+    <meta name="twitter:domain" content="iosdevpriyank.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <title>Priyank Gandhi - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Modern portfolio showcasing my work and skills" />
+    <meta property="og:title" content="Priyank Gandhi - Senior iOS Engineer &amp; Architect" />
+    <meta property="og:description" content="Professional iOS developer with 12+ years of experience designing and scaling native applications." />
+    <meta property="og:image" content="https://iosdevpriyank.github.io/images/photo_office.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Priyank Gandhi - Senior iOS Engineer &amp; Architect" />
+    <meta name="twitter:description" content="Professional iOS developer with 12+ years of experience." />
+    <meta name="twitter:image" content="https://iosdevpriyank.github.io/images/photo_office.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="/css/portfolio.css" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="/js/portfolio.js"></script>
+  </head>
+  <body class="container">
+    <header>
+      <nav class="main-nav navbar navbar-expand-md">
+        <div class="container flex-wrap flex-lg-nowrap">
+          <div class="me-2 me-md-auto">
+            <a href="/" class="d-inline-flex align-items-center navbar-brand">🍎 Priyank Gandhi</a>
+          </div>
+          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+              <li class="nav-item"><a href="/home" class="nav-link text-nowrap">Home</a></li>
+              <li class="nav-item"><a href="/projects" class="nav-link active text-nowrap" aria-current="page">Projects</a></li>
+              <li class="nav-item"><a href="/blog" class="nav-link text-nowrap">Blog</a></li>
+              <li class="nav-item"><a href="/about" class="nav-link text-nowrap">About</a></li>
+              <li class="nav-item"><a href="/contact" class="nav-link text-nowrap">Contact</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-nowrap">🌙</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="ig-main-content">
+      <div class="section" style="padding-top: 140px; padding-bottom: 4rem; max-width: 1000px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem">
+        <h1 style="font-weight: 700; text-align: center; margin-bottom: 1rem; color: var(--text-primary)">Professional Projects</h1>
+        <p class="lead" style="text-align: center; color: var(--text-secondary); margin-bottom: 4rem">Production-grade iOS applications delivered for client and enterprise systems.</p>
+        <div class="row justify-content-center row-cols-1 row-cols-md-1" style="gap: 3rem">
+          <div class="col align-self-center g-3">
+            <div class="vstack" style="padding: 3rem; border-radius: 24px; background: var(--glass-bg-primary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-primary); box-shadow: 0 8px 32px rgba(0,0,0,0.05); gap: 15px">
+              <div class="mb-0 align-self-start hstack gap-3">
+                <div class="mb-0 align-self-center vstack">
+                  <h2 class="mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary)">VS App</h2>
+                  <p class="mb-0 align-self-start" style="font-weight: 600; color: var(--accent-primary)">Video Management System</p>
+                </div>
+                <div class="ms-auto"></div>
+                <p class="ig-text-small mb-0 align-self-center" style="color: var(--accent-success); border: 1px solid var(--accent-success); padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600">2 Years 10 Months</p>
+              </div>
+              <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.6">A direct-to-cloud video surveillance platform giving users real-time access to live streams, clip searches, and AI event alerts.</p>
+              <div class="mb-0 align-self-start vstack" style="gap: 5px">
+                <p class="mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem">My Contribution:</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Architected reusable UI components and onboarding flows.</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Integrated low-latency video feeds and real-time MQTT events.</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Implemented in-app custom localization framework independent of OS settings.</p>
+              </div>
+              <div class="mb-0 align-self-start vstack" style="margin-top: 1rem; gap: 5px">
+                <p class="ig-text-small mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary)">Stack &amp; Tools:</p>
+                <p class="ig-text-small mb-0 align-self-start" style="color: var(--text-tertiary)">Xcode, iOS SDK, MQTT, Video Streams</p>
+              </div>
+            </div>
+          </div>
+          <div class="col align-self-center g-3">
+            <div class="vstack" style="padding: 3rem; border-radius: 24px; background: var(--glass-bg-primary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-primary); box-shadow: 0 8px 32px rgba(0,0,0,0.05); gap: 15px">
+              <div class="mb-0 align-self-start hstack gap-3">
+                <div class="mb-0 align-self-center vstack">
+                  <h2 class="mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary)">Intelli Center</h2>
+                  <p class="mb-0 align-self-start" style="font-weight: 600; color: var(--accent-primary)">Pool Control System</p>
+                </div>
+                <div class="ms-auto"></div>
+                <p class="ig-text-small mb-0 align-self-center" style="color: var(--accent-success); border: 1px solid var(--accent-success); padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600">1 Year 2 Months</p>
+              </div>
+              <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.6">Cloud-enabled pool automation platform allowing users to control heaters, pumps, lights, and water features remotely.</p>
+              <div class="mb-0 align-self-start vstack" style="gap: 5px">
+                <p class="mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem">My Contribution:</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Designed and developed primary iOS application modules.</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Integrated robust AWS cloud connectivity for device state synchronization.</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Managed release pipelines, sprint planning, and code quality compliance.</p>
+              </div>
+              <div class="mb-0 align-self-start vstack" style="margin-top: 1rem; gap: 5px">
+                <p class="ig-text-small mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary)">Stack &amp; Tools:</p>
+                <p class="ig-text-small mb-0 align-self-start" style="color: var(--text-tertiary)">Xcode, iOS SDK, AWS IoT, CoreData</p>
+              </div>
+            </div>
+          </div>
+          <div class="col align-self-center g-3">
+            <div class="vstack" style="padding: 3rem; border-radius: 24px; background: var(--glass-bg-primary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-primary); box-shadow: 0 8px 32px rgba(0,0,0,0.05); gap: 15px">
+              <div class="mb-0 align-self-start hstack gap-3">
+                <div class="mb-0 align-self-center vstack">
+                  <h2 class="mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary)">Event Edge</h2>
+                  <p class="mb-0 align-self-start" style="font-weight: 600; color: var(--accent-primary)">Corporate Event Platform</p>
+                </div>
+                <div class="ms-auto"></div>
+                <p class="ig-text-small mb-0 align-self-center" style="color: var(--accent-success); border: 1px solid var(--accent-success); padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 600">4 Years 2 Months</p>
+              </div>
+              <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.6">Internal enterprise application built to manage large corporate meetings, schedules, speaker booking, and media distribution.</p>
+              <div class="mb-0 align-self-start vstack" style="gap: 5px">
+                <p class="mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary); margin-bottom: 0.5rem">My Contribution:</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Led migration of legacy modules from Objective-C to modern Swift.</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Integrated Zoom SDK and custom scheduler workflows.</p>
+                <p class="mb-0 align-self-start" style="color: var(--text-secondary); line-height: 1.5">• Oversaw App Store provisioning, enterprise distribution, and compliance.</p>
+              </div>
+              <div class="mb-0 align-self-start vstack" style="margin-top: 1rem; gap: 5px">
+                <p class="ig-text-small mb-0 align-self-start" style="font-weight: 700; color: var(--text-primary)">Stack &amp; Tools:</p>
+                <p class="ig-text-small mb-0 align-self-start" style="color: var(--text-tertiary)">Xcode, Swift, Objective-C, Zoom SDK, Enterprise CI</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section" style="padding-top: 4rem; padding-bottom: 6rem; max-width: 1200px; margin: 0 auto; padding-left: 2rem; padding-right: 2rem">
+        <h1 style="font-weight: 700; text-align: center; margin-bottom: 1rem; color: var(--text-primary)">Open Source &amp; Personal Work</h1>
+        <p class="lead" style="text-align: center; color: var(--text-secondary); margin-bottom: 4rem">Public repositories fetched dynamically from my GitHub profile.</p>
+        <p id="github-projects" style="text-align: center; color: var(--text-secondary); min-height: 200px">Connecting to GitHub...</p>
+      </div>
+    </div>
+    <div class="vstack" style="background: var(--glass-bg-primary); backdrop-filter: var(--glass-blur); border-top: 1px solid var(--glass-border-primary); padding: 3rem 0 2rem 0; margin-top: 4rem">
+      <div class="mb-0 align-self-center hstack" style="gap: 3rem; align-items: start; margin-bottom: 3rem; gap: 32px">
+        <div class="mb-0 align-self-center vstack">
+          <h2 class="mb-0 align-self-center" style="font-weight: 700; color: var(--text-primary); margin-bottom: 1rem">iOS Engineer</h2>
+          <p class="mb-0 align-self-center" style="color: var(--text-secondary); margin-bottom: 2rem">Crafting exceptional mobile experiences</p>
+        </div>
+        <div class="mb-0 align-self-center hstack gap-3" style="gap: 1rem; justify-content: center">
+          <p class="mb-0 align-self-center" style="font-size: 1.2rem; background: var(--glass-bg-secondary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-secondary); padding: 0.75rem; border-radius: 12px; transition: all 0.2s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px"><a rel="external" target="_blank" href="https://github.com/priyankgandhi" style="cursor: pointer; color: #181717"><i class="bi-github"></i></a></p>
+          <p class="mb-0 align-self-center" style="font-size: 1.2rem; background: var(--glass-bg-secondary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-secondary); padding: 0.75rem; border-radius: 12px; transition: all 0.2s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px"><a rel="external" target="_blank" href="https://linkedin.com/in/priyankgandhi" style="cursor: pointer; color: #0077B5"><i class="bi-linkedin"></i></a></p>
+          <p class="mb-0 align-self-center" style="font-size: 1.2rem; background: var(--glass-bg-secondary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-secondary); padding: 0.75rem; border-radius: 12px; transition: all 0.2s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px"><a rel="external" target="_blank" href="https://medium.com/@iosdev.priyank" style="cursor: pointer; color: #00AB6C"><i class="bi-medium"></i></a></p>
+          <p class="mb-0 align-self-center" style="font-size: 1.2rem; background: var(--glass-bg-secondary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-secondary); padding: 0.75rem; border-radius: 12px; transition: all 0.2s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px"><a rel="external" target="_blank" href="mailto:iosdev.priyank@gmail.com" style="cursor: pointer; color: #EA4335"><i class="bi-envelope"></i></a></p>
+        </div>
+        <div class="mb-0 align-self-center vstack">
+          <h3 class="mb-0 align-self-center" style="font-weight: 700; color: var(--text-primary); margin-bottom: 1rem">Quick Links</h3>
+          <div class="mb-0 align-self-center row justify-content-center" style="row-gap: 20px">
+            <div class="col align-self-center">
+              <p style="text-decoration: none; font-weight: 500; transition: color 0.2s ease; padding: 0.25rem 0"><a href="/about" style="color: var(--text-secondary)">About</a></p>
+            </div>
+            <div class="col align-self-center">
+              <p style="text-decoration: none; font-weight: 500; transition: color 0.2s ease; padding: 0.25rem 0"><a href="/projects" style="color: var(--text-secondary)">Projects</a></p>
+            </div>
+            <div class="col align-self-center">
+              <p style="text-decoration: none; font-weight: 500; transition: color 0.2s ease; padding: 0.25rem 0"><a href="/blog" style="color: var(--text-secondary)">Blog</a></p>
+            </div>
+            <div class="col align-self-center">
+              <p style="text-decoration: none; font-weight: 500; transition: color 0.2s ease; padding: 0.25rem 0"><a href="/contact" style="color: var(--text-secondary)">Contact</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="mb-0 align-self-center" style="height: 1px; background: var(--glass-border-secondary); margin: 2rem 0" />
+      <div class="mb-0 align-self-center hstack gap-3" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem">
+        <p class="ig-text-small mb-0 align-self-center" style="color: var(--text-tertiary)">© 2026 Priyank Gandhi - iOS Engineer</p>
+        <div class="mb-0 align-self-center hstack gap-3" style="gap: 0.25rem">
+          <p class="ig-text-small mb-0 align-self-center" style="color: var(--text-tertiary)">Built with</p>
+          <p class="ig-text-small mb-0 align-self-center" style="color: var(--accent-primary); font-weight: 600">Ignite</p>
+          <p class="ig-text-small mb-0 align-self-center" style="color: var(--text-tertiary)">&amp; Swift</p>
+        </div>
+      </div>
+    </div>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Priyank Gandhi",
+  "jobTitle": "Senior iOS Engineer & Architect",
+  "url": "https://iosdevpriyank.github.io",
+  "sameAs": [
+    "https://github.com/priyankgandhi",
+    "https://linkedin.com/in/priyankgandhi",
+    "https://medium.com/@iosdev.priyank"
+  ]
+}
+</script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

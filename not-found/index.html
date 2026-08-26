@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="The page you are looking for does not exist." />
+    <meta name="author" content="Priyank Gandhi" />
+    <meta name="generator" content="Ignite v0.6.0" />
+    <title>404 - Page Not Found</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://iosdevpriyank.github.io/not-found" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Senior iOS Developer Portfolio" />
+    <meta property="og:title" content="404 - Page Not Found" />
+    <meta name="twitter:title" content="404 - Page Not Found" />
+    <meta property="og:description" content="The page you are looking for does not exist." />
+    <meta name="twitter:description" content="The page you are looking for does not exist." />
+    <meta property="og:url" content="https://iosdevpriyank.github.io/not-found" />
+    <meta name="twitter:domain" content="iosdevpriyank.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <title>Priyank Gandhi - Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Modern portfolio showcasing my work and skills" />
+    <meta property="og:title" content="Priyank Gandhi - Senior iOS Engineer &amp; Architect" />
+    <meta property="og:description" content="Professional iOS developer with 12+ years of experience designing and scaling native applications." />
+    <meta property="og:image" content="https://iosdevpriyank.github.io/images/photo_office.png" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Priyank Gandhi - Senior iOS Engineer &amp; Architect" />
+    <meta name="twitter:description" content="Professional iOS developer with 12+ years of experience." />
+    <meta name="twitter:image" content="https://iosdevpriyank.github.io/images/photo_office.png" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="/css/portfolio.css" rel="stylesheet" />
+    <script src="https://code.iconify.design/iconify-icon/2.1.0/iconify-icon.min.js"></script>
+    <script src="/js/portfolio.js"></script>
+  </head>
+  <body class="container">
+    <header>
+      <nav class="main-nav navbar navbar-expand-md">
+        <div class="container flex-wrap flex-lg-nowrap">
+          <div class="me-2 me-md-auto">
+            <a href="/" class="d-inline-flex align-items-center navbar-brand">🍎 Priyank Gandhi</a>
+          </div>
+          <button type="button" class="navbar-toggler btn" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+          <div id="navbarCollapse" class="collapse navbar-collapse">
+            <ul class="navbar-nav mb-2 mb-md-0 col justify-content-end">
+              <li class="nav-item"><a href="/home" class="nav-link text-nowrap">Home</a></li>
+              <li class="nav-item"><a href="/projects" class="nav-link text-nowrap">Projects</a></li>
+              <li class="nav-item"><a href="/blog" class="nav-link text-nowrap">Blog</a></li>
+              <li class="nav-item"><a href="/about" class="nav-link text-nowrap">About</a></li>
+              <li class="nav-item"><a href="/contact" class="nav-link text-nowrap">Contact</a></li>
+              <li class="nav-item"><a href="#" class="nav-link text-nowrap">🌙</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div class="ig-main-content">
+      <div class="section" style="padding-top: 160px; padding-bottom: 6rem; text-align: center; min-height: 80vh">
+        <h1 style="font-size: 6rem; font-weight: 800; color: var(--accent-primary); margin-bottom: 1rem">404</h1>
+        <h2 style="font-weight: 700; margin-bottom: 2rem; color: var(--text-primary)">Out of Bounds!</h2>
+        <p class="lead" style="color: var(--text-secondary); margin-bottom: 3rem">It looks like you've navigated to a route that doesn't exist. Below is some Swift code inspiration to help guide you back!</p>
+        <div class="vstack" style="background: #1e293b; padding: 2rem; border-radius: 15px; text-align: left; max-width: 600px; margin: 0 auto 3rem auto; box-shadow: 0 4px 20px rgba(0,0,0,0.15)">
+          <p class="mb-0 align-self-center" style="color: rgba(255, 255, 255, 0.6); font-family: monospace">// Swift Tip: KeyPaths can make routing dynamic &amp; clean.</p>
+          <p class="mb-0 align-self-center" style="color: rgba(255, 255, 255, 0.6); font-family: monospace">// Quote: 'The only limit to realization of tomorrow is doubts of today.'</p>
+          <p class="mb-0 align-self-center" style="height: 0.5rem"></p>
+          <p class="mb-0 align-self-center" style="color: white; font-family: monospace">struct RouterResolver {</p>
+          <p class="mb-0 align-self-center" style="color: white; font-family: monospace"> let destination = "Home"</p>
+          <p class="mb-0 align-self-center" style="font-family: monospace"> </p>
+          <p class="mb-0 align-self-center" style="color: white; font-family: monospace"> func navigateHome() {</p>
+          <p class="mb-0 align-self-center" style="color: white; font-family: monospace"> let pathKey = \RouterResolver.destination</p>
+          <p class="mb-0 align-self-center" style="color: white; font-family: monospace"> print("Safe redirect to: \(self[keyPath: pathKey])")</p>
+          <p class="mb-0 align-self-center" style="color: white; font-family: monospace"> }</p>
+          <p class="mb-0 align-self-center" style="color: white; font-family: monospace">}</p>
+        </div>
+        <a href="/home" class="btn btn-primary">Go Back Home</a>
+      </div>
+    </div>
+    <div class="vstack" style="background: var(--glass-bg-primary); backdrop-filter: var(--glass-blur); border-top: 1px solid var(--glass-border-primary); padding: 3rem 0 2rem 0; margin-top: 4rem">
+      <div class="mb-0 align-self-center hstack" style="gap: 3rem; align-items: start; margin-bottom: 3rem; gap: 32px">
+        <div class="mb-0 align-self-center vstack">
+          <h2 class="mb-0 align-self-center" style="font-weight: 700; color: var(--text-primary); margin-bottom: 1rem">iOS Engineer</h2>
+          <p class="mb-0 align-self-center" style="color: var(--text-secondary); margin-bottom: 2rem">Crafting exceptional mobile experiences</p>
+        </div>
+        <div class="mb-0 align-self-center hstack gap-3" style="gap: 1rem; justify-content: center">
+          <p class="mb-0 align-self-center" style="font-size: 1.2rem; background: var(--glass-bg-secondary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-secondary); padding: 0.75rem; border-radius: 12px; transition: all 0.2s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px"><a rel="external" target="_blank" href="https://github.com/priyankgandhi" style="cursor: pointer; color: #181717"><i class="bi-github"></i></a></p>
+          <p class="mb-0 align-self-center" style="font-size: 1.2rem; background: var(--glass-bg-secondary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-secondary); padding: 0.75rem; border-radius: 12px; transition: all 0.2s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px"><a rel="external" target="_blank" href="https://linkedin.com/in/priyankgandhi" style="cursor: pointer; color: #0077B5"><i class="bi-linkedin"></i></a></p>
+          <p class="mb-0 align-self-center" style="font-size: 1.2rem; background: var(--glass-bg-secondary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-secondary); padding: 0.75rem; border-radius: 12px; transition: all 0.2s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px"><a rel="external" target="_blank" href="https://medium.com/@iosdev.priyank" style="cursor: pointer; color: #00AB6C"><i class="bi-medium"></i></a></p>
+          <p class="mb-0 align-self-center" style="font-size: 1.2rem; background: var(--glass-bg-secondary); backdrop-filter: var(--glass-blur); border: 1px solid var(--glass-border-secondary); padding: 0.75rem; border-radius: 12px; transition: all 0.2s ease; text-decoration: none; display: flex; align-items: center; justify-content: center; width: 45px; height: 45px"><a rel="external" target="_blank" href="mailto:iosdev.priyank@gmail.com" style="cursor: pointer; color: #EA4335"><i class="bi-envelope"></i></a></p>
+        </div>
+        <div class="mb-0 align-self-center vstack">
+          <h3 class="mb-0 align-self-center" style="font-weight: 700; color: var(--text-primary); margin-bottom: 1rem">Quick Links</h3>
+          <div class="mb-0 align-self-center row justify-content-center" style="row-gap: 20px">
+            <div class="col align-self-center">
+              <p style="text-decoration: none; font-weight: 500; transition: color 0.2s ease; padding: 0.25rem 0"><a href="/about" style="color: var(--text-secondary)">About</a></p>
+            </div>
+            <div class="col align-self-center">
+              <p style="text-decoration: none; font-weight: 500; transition: color 0.2s ease; padding: 0.25rem 0"><a href="/projects" style="color: var(--text-secondary)">Projects</a></p>
+            </div>
+            <div class="col align-self-center">
+              <p style="text-decoration: none; font-weight: 500; transition: color 0.2s ease; padding: 0.25rem 0"><a href="/blog" style="color: var(--text-secondary)">Blog</a></p>
+            </div>
+            <div class="col align-self-center">
+              <p style="text-decoration: none; font-weight: 500; transition: color 0.2s ease; padding: 0.25rem 0"><a href="/contact" style="color: var(--text-secondary)">Contact</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr class="mb-0 align-self-center" style="height: 1px; background: var(--glass-border-secondary); margin: 2rem 0" />
+      <div class="mb-0 align-self-center hstack gap-3" style="justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem">
+        <p class="ig-text-small mb-0 align-self-center" style="color: var(--text-tertiary)">© 2026 Priyank Gandhi - iOS Engineer</p>
+        <div class="mb-0 align-self-center hstack gap-3" style="gap: 0.25rem">
+          <p class="ig-text-small mb-0 align-self-center" style="color: var(--text-tertiary)">Built with</p>
+          <p class="ig-text-small mb-0 align-self-center" style="color: var(--accent-primary); font-weight: 600">Ignite</p>
+          <p class="ig-text-small mb-0 align-self-center" style="color: var(--text-tertiary)">&amp; Swift</p>
+        </div>
+      </div>
+    </div>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Priyank Gandhi",
+  "jobTitle": "Senior iOS Engineer & Architect",
+  "url": "https://iosdevpriyank.github.io",
+  "sameAs": [
+    "https://github.com/priyankgandhi",
+    "https://linkedin.com/in/priyankgandhi",
+    "https://medium.com/@iosdev.priyank"
+  ]
+}
+</script>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
